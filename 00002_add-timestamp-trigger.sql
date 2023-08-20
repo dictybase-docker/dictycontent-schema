@@ -12,5 +12,3 @@ CREATE TRIGGER updated_at_content
     BEFORE UPDATE ON content
     FOR EACH ROW EXECUTE PROCEDURE  updated_at_column();
 -- +goose StatementEnd
--- +goose Down
-DROP FUNCTION IF EXISTS updated_at_column();
