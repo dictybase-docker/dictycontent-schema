@@ -21,9 +21,3 @@ CREATE TABLE content (
     CONSTRAINT content_c1 UNIQUE (slug,namespace_id),
     PRIMARY KEY (content_id)
 );
-
--- +goose Down
--- SQL in this section is executed when the migration is rolled back.
-
-DROP TABLE IF EXISTS content CASCADE;
-DROP TABLE IF EXISTS namespace CASCADE;
